@@ -1,0 +1,24 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  message LED_Message LM;
+}
+on message Switch_Message
+{
+  if($Switch_Message::Switch_Signal==1)
+  {
+    LM.LED_Signal=1;
+    output(LM);
+  }
+  else
+    {
+    LM.LED_Signal=0;
+    output(LM);
+  }
+}
+

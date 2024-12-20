@@ -1,0 +1,21 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  
+}
+on envVar Env_Switch
+{
+  if(@Env_Switch==1)
+  {
+    $Switch_Message::Switch_Signal=1;
+  }
+  else
+  {
+    $Switch_Message::Switch_Signal=0;
+  }
+}
